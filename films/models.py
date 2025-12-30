@@ -43,7 +43,7 @@ class Review(models.Model):
         default=7
     )
     film = models.ForeignKey(Film, on_delete=models.CASCADE,
-                             related_name='reviews')
+                             related_name='reviews')  # film_id
 
     def __str__(self):
         return self.text
